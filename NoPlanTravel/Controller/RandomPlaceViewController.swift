@@ -12,7 +12,12 @@ class RandomPlaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // 주변 관광지 검색
+        
+        // 관광지 리스트에서 랜덤으로 한곳 결정
+        
+        // 출력
+        
     }
     
 

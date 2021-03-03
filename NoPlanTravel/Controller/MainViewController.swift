@@ -9,11 +9,16 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var imgRandomPlace: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func randomPlaceTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "ToRandomPlaceVC", sender: self)
+    }
 }
 

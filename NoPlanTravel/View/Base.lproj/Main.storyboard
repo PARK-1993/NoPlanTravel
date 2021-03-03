@@ -44,6 +44,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="bHg-Zt-7jG" secondAttribute="trailing" id="Fhf-m1-HHV"/>
                                                             <constraint firstItem="bHg-Zt-7jG" firstAttribute="top" secondItem="Sqt-Ju-cDE" secondAttribute="top" id="G4E-th-4oS"/>
@@ -54,6 +55,9 @@
                                                             <constraint firstItem="gVh-DX-0a3" firstAttribute="leading" secondItem="Sqt-Ju-cDE" secondAttribute="leading" id="wMv-0J-kQE"/>
                                                             <constraint firstAttribute="trailing" secondItem="gVh-DX-0a3" secondAttribute="trailing" id="wcp-f6-WmY"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="WgM-8y-mrC" appends="YES" id="Apv-Ne-JhZ"/>
+                                                        </connections>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.71341603328367165" blue="0.63999582066916472" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -118,11 +122,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="nel-a2-imD"/>
                     <connections>
+                        <outlet property="ImgRandomPlace" destination="bHg-Zt-7jG" id="6qo-5v-oYP"/>
                         <segue destination="ehz-9Z-Hj7" kind="show" identifier="ToRandomPlaceVC" id="3Zx-Cr-iU0"/>
                         <segue destination="QKd-aQ-rSh" kind="show" identifier="ToFindClosePlaceVC" id="goj-Dp-2wp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WgM-8y-mrC">
+                    <connections>
+                        <action selector="randomPlaceTapped:" destination="BYZ-38-t0r" id="aEc-oR-7wR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1005.7971014492755" y="130.58035714285714"/>
         </scene>

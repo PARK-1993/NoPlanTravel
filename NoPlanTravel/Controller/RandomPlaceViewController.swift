@@ -6,21 +6,32 @@
 //
 
 import UIKit
+import CoreLocation
 
-class RandomPlaceViewController: UIViewController {
+class RandomPlaceViewController: UIViewController, CLLocationManagerDelegate {
 
+    var mapManager : MapManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mapManager = MapManager(VC: self)
+    }
+    
+    func selectRandomTouristSpot(){
+        
+        // 현재위치 파악
+        let presentLocation : (Double, Double) = mapManager.getPresentLocation()
+        
         // 주변 관광지 검색
+        let lstTouristSpotList : [TouristSpot] = mapManager.getTouristSpotListNearby()
         
         // 관광지 리스트에서 랜덤으로 한곳 결정
         
         // 출력
-        
+
     }
     
-
     /*
     // MARK: - Navigation
 
